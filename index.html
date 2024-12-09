@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex-container">
+    <div class="flex-item1"></div>
+
+
+    </div>
+    
+    
+    <div id="container1"></div>
+    <button id="MyButton"></button> 
+    <button setSize="600,300"></button>
+
+    
+    
+    <script>
+        
+        const arr = ["fsd" , "sfd" ,"sdf" , "fsd","fd" , "gdf"];
+        const li_arr = [];
+
+
+        
+        const el = document.getElementById("container1");
+        const btn = document.getElementById("MyButton");
+        const ul_el = document.createElement("ul");
+
+        ul_el.innerText = "gdf"
+        el.appendChild(ul_el);
+
+    function changeColor(li_arr) {
+
+
+    }
+        for (let i = 0; i<arr.length;i++){
+            const li_el = document.createElement("li");
+            li_el.innerText = arr[i];
+            ul_el.appendChild(li_el);
+            li_arr.push(li_el);
+        }
+
+        const MyButton = document.getElementById("MyButton");
+        let state = true
+        MyButton.addEventListener ("click" , function () {
+            if (state == true) {
+                ul_el.style.background = "pink";
+                state = false;
+            }
+            else {
+                ul_el.style.background = "yellow";
+                state = true;
+            }
+        })
+
+        
+        ul_el.style.background = "white"
+        
+        
+    </script>
+</body>
+
+<style>
+.myButton {
+      background-color: #000000;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 15%;
+      position: absolute;
+      bottom: 10%;
+      right: 10%;
+}
+
+</style>
+</html>
